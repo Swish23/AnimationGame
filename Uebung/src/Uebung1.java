@@ -13,7 +13,13 @@ public class Uebung1 {
 				if(x<=0){return 0;}
 					else {
 					if(x==1 || x==2){return 1;}
-						else{return(fibonacci(x-2)+fibonacci(x-1));}
-				}
+						else{return(fibonacci(x-2)+fibonacci(x-1));}				
+					}
+			static long collatz (long a){
+				if(a<0){return 0;}
+					else {
+						if (a/2)?
+					}
+			}
 			}
 		}
