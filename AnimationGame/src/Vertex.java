@@ -28,8 +28,10 @@ public class Vertex {
 		y = y*s;
 	}
 	public Vertex add(double s){//erzeugt neues Objekt an den Koord + s
-		return new Vertex(x+s, y+s);
+		return new Vertex(x+s, y+s);}
 	
+		public Vertex add(Vertex v){//erzeugt neues Objekt an den Koord + s
+			return new Vertex(x+v.x, y+v.y);	
 	}
 	/*public void addNod(double x, double y){
 		addMod(s,s);
