@@ -43,5 +43,32 @@ public class GeometricObject {
 		return "width="+width+" , height="+height+", pos="+pos;
 	}
 	
-	
-}
+	public double circumference(){return 2*(width+height);}
+    
+    public double area(){return width*height;}
+   
+    public boolean contains(Vertex v) {
+    	return v.x >= pos.x && v.x <= pos.x+width //x is within
+    	&& v.y >= pos.y && v.y <= pos.y+height; //y is within
+    }
+    
+    public boolean isLargerThan(GeometricObject that) {
+    	return this.area() > that.area();}
+   
+    public void moveTo(Vertex pos) {this.pos=pos;}
+
+    public void moveTo(double x, double y) {moveTo(new Vertex(x,y));}
+
+    public void move(Vertex v) {moveTo(pos.add(v));}
+
+    public boolean equals(Object thatObject) {
+    	if (thatObject instanceof GeometricObject) {
+    		GeometricObject that = (GeometricObject)thatObject;
+    		return that.width==this.width && this.height==that.height
+    				&& this.pos.equals(that.pos);
+    	}
+    	return false;
+    }
+	}
+
+
