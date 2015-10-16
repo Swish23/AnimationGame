@@ -1,14 +1,13 @@
 
-public class SimpleOval extends GeometricObject {
-
-	public SimpleOval (double w, double h, Vertex pos){
+public class Square extends GeometricObject{
+	public Square (double w, double h, Vertex pos){
 		super(w, h, pos);
 	}
-	public SimpleOval (double w, double h, double x, double y){
+	public Square (double w, double h, double x, double y){
 		super(w,h, new Vertex(x,y));
 	}
 	
-	@Override public double area() {return Math.PI*width*height/4;}
+	@Override public double area() {return height*width;}
 	
 	@Override public String toString(){
 		return "SimpleOval("+super.toString()+")";}
